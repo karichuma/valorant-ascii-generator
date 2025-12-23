@@ -2,19 +2,29 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VALORANT ASCII Generator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>VALORANT ASCII Generator</h1>
-<p>Valorantチャット用アスキーアート生成ツール</p>
+  <div class="container">
+    <h1>VALORANT ASCII Generator</h1>
+    <p>チャット欄で目立つAAを生成します</p>
 
-<input id="text" placeholder="例: ACE">
-<button id="gen">生成</button>
+    <div class="input-group">
+      <input id="text" placeholder="例: ACE / ナイス" maxlength="15">
+      <div class="button-group">
+        <button id="gen" class="btn-main">生成</button>
+        <button id="copy" class="btn-sub">コピー</button>
+      </div>
+    </div>
 
-<textarea id="output" readonly></textarea>
+    <textarea id="output" readonly placeholder="ここにAAが生成されます..."></textarea>
+    
+    <p class="notice">※濁点・小書き文字は自動で変換されます</p>
+  </div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
